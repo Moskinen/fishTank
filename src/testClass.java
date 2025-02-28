@@ -30,13 +30,11 @@ public class testClass {
 
 
         } else if (userInput.equals("3")) {
-            System.out.print("Would you like to change the water? Y/N");
-            String userInputWater = scanner.nextLine();
-            if (userInputWater.equals("Y")) {
-                fishtank.changeWater();
-            }
+            waterChange(scanner, fishtank);
+
         } else if (userInput.equals("4")) {
             System.out.println(fishtank);
+
         } else if (userInput.equals("5")) {
             break;
         }
@@ -61,4 +59,11 @@ public class testClass {
         return fish;
     }
 
+    public static void waterChange(Scanner scanner, fishTank fishtank){
+        System.out.print("Would you like to change the water? Y/N");
+        String userInputWater = scanner.nextLine();
+        if (userInputWater.equals("Y")) {
+            fishtank.changeWater();
+        }
+    }
 }
