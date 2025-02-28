@@ -16,11 +16,15 @@ public class fishTank {
 
     private WaterQuality waterQuality;
 
+    public fishTank() {
+        this.lastWaterChange = "";
+    }
+
     public fishTank(String lastWaterChange) {
         this.lastWaterChange = lastWaterChange;
     }
 
-    public void changeWater(String waterPercent, String algeKiller) {
+    public void changeWater() {
         System.out.println("Whats the current date?");
         this.lastWaterChange = scanner.nextLine();
 
@@ -31,6 +35,10 @@ public class fishTank {
         String userInputAlgeKiller = scanner.nextLine();
 
         changeWaterQuality();
+
+        System.out.println("Water Change Status:");
+        System.out.println("Date: " + this.lastWaterChange + " Percent water changed: " + userInputPercent +
+                " ML of Alge Killer added: " + userInputAlgeKiller + " Previous Water Quality: ");
     }
 
     public void changeWaterQuality () {
@@ -57,6 +65,7 @@ public class fishTank {
             default:
                 System.out.println("Invalid input");
         }
+
     }
 
     @Override

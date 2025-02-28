@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class testClass {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        fishTank fishtank = new fishTank("26-02-2025", "Good");
+        fishTank fishtank = new fishTank();
 
         fish[] fish = {
                 new fish("Wogglie", "Tank 1", "blue", "Clown Fish", true),
@@ -30,11 +30,14 @@ public class testClass {
             String userInputWater = scanner.nextLine();
             if (userInputWater.equals("Y")) {
                 fishtank.changeWater();
+                break;
+            } else {
+                break;
             }
         } else if (userInput.equals("4")) {
-            System.out.println(fishtank.toString());
+            System.out.println(fishtank);
         } else if (userInput.equals("5")) {
-
+            break;
         }
     }
     }
