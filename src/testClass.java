@@ -22,19 +22,12 @@ public class testClass {
         String userInput = scanner.nextLine();
 
         if (userInput.equals("1")) {
+            viewFish(fish);
 
-            for(fish s : fish) {
-                System.out.println(s);
-            }
 
         } else if (userInput.equals("2")) {
+            updateFishHealth(fish, scanner);
 
-            for(int i = 0; i < fish.length; i++ ){
-                System.out.println("Update health of: " + fish[i].getName());
-                String userInputHealth = scanner.nextLine();
-                fish[i].updateHealthStatus(userInputHealth);
-
-            }
 
         } else if (userInput.equals("3")) {
             System.out.print("Would you like to change the water? Y/N");
@@ -48,6 +41,24 @@ public class testClass {
             break;
         }
     }
+    }
+
+    public static fish[] viewFish(fish[] fish) {
+
+        for(fish s : fish) {
+            System.out.println(s);
+        }
+        return fish;
+    }
+
+    public static fish[] updateFishHealth(fish[] fish, Scanner scanner) {
+        for(int i = 0; i < fish.length; i++ ){
+            System.out.println("Update health of: " + fish[i].getName());
+            String userInputHealth = scanner.nextLine();
+            fish[i].updateHealthStatus(userInputHealth);
+
+        }
+        return fish;
     }
 
 }
