@@ -58,7 +58,7 @@ public class fish {
 
     //toString
     public String toString(){
-        return "Name of fish: " + name + "\nHealth status: " + healthStatus + "| Lives in: "
+        return "Name of fish: " + name + "\nHealth status: " + healthStatus + " | Lives in: "
                 + home + "\nFish info: " + color + ", " + species + ", " + this.getSex() + "\n----------------------";
     }
 
