@@ -2,13 +2,13 @@ public class fish {
     //Attributes
     private final String name;
     private String healthStatus;
-    private fishTank home;
+    private String home;
     private final String color;
     private final String species;
     private final boolean sex;
 
     //Constructor
-    public fish(String name, fishTank home, String color, String species, boolean sex){
+    public fish(String name, String home, String color, String species, boolean sex){
         this.name = name;
         this.healthStatus = "Healthy";
         this.home = home;
@@ -26,7 +26,7 @@ public class fish {
         return this.healthStatus;
     }
 
-    fishTank getHome(){
+    String getHome(){
         return this.home;
     }
 
@@ -51,7 +51,7 @@ public class fish {
         this.healthStatus = updateHealth;
     }
 
-    void changeHome(fishTank updateHome){
+    void changeHome(String updateHome){
         this.home = updateHome;
     }
 

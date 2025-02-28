@@ -5,6 +5,11 @@ public class testClass {
         Scanner scanner = new Scanner(System.in);
         fishTank fishtank = new fishTank("26-02-2025", "Good");
 
+        fish[] fish = {
+                new fish("Wogglie", "Tank 1", "blue", "Clown Fish", true),
+                new fish("Swimmie", "Tank 1", "yellow", "Angel Fish", false)
+        };
+
         System.out.println("Welcome to our fish menu. \n You can select your option by choosing a number between 1 - 5");
         System.out.println("1. Viewing fish status\n" +
                 "2. Updating fish health\n" +
