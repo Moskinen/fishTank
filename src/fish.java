@@ -62,7 +62,5 @@ public class fish {
                 + home + "\nFish info:\n" + color + ", " + species + ", " + this.getSex();
     }
 
-
-
 }
 

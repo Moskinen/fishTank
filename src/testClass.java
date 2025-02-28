@@ -23,6 +23,10 @@ public class testClass {
 
         if (userInput.equals("1")) {
 
+            for(fish s : fish) {
+                System.out.println(s);
+            }
+
         } else if (userInput.equals("2")) {
 
         } else if (userInput.equals("3")) {
