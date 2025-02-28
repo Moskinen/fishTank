@@ -29,6 +29,13 @@ public class testClass {
 
         } else if (userInput.equals("2")) {
 
+            for(int i = 0; i < fish.length; i++ ){
+                System.out.println("Update health of: " + fish[i].getName());
+                String userInputHealth = scanner.nextLine();
+                fish[i].updateHealthStatus(userInputHealth);
+
+            }
+
         } else if (userInput.equals("3")) {
             System.out.print("Would you like to change the water? Y/N");
             String userInputWater = scanner.nextLine();
