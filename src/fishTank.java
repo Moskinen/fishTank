@@ -37,8 +37,8 @@ public class fishTank {
         changeWaterQuality();
 
         System.out.println("Water Change Status:");
-        System.out.println("Date: " + this.lastWaterChange + " Percent water changed: " + userInputPercent +
-                " ML of Alge Killer added: " + userInputAlgeKiller + " Previous Water Quality: ");
+        System.out.println("Date: " + this.lastWaterChange + ". Percent water changed: " + userInputPercent +
+                ". ML of Alge Killer added: " + userInputAlgeKiller + ". Previous Water Quality: " + waterQuality);
     }
 
     public void changeWaterQuality () {
@@ -64,6 +64,7 @@ public class fishTank {
                 break;
             default:
                 System.out.println("Invalid input");
+                waterQuality = WaterQuality.OKAY;
         }
 
     }

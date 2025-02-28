@@ -7,17 +7,17 @@ public class testClass {
 
         fish[] fish = {
                 new fish("Wogglie", "Tank 1", "blue", "Clown Fish", true),
-                new fish("Swimmie", "Tank 1", "yellow", "Angel Fish", false)
+                new fish("Swimmie", "Tank 1", "yellow", "Angel Fish", true)
         };
 
-        System.out.println("Welcome to our fish menu. \n You can select your option by choosing a number between 1 - 5");
-        System.out.println("1. Viewing fish status\n" +
-                "2. Updating fish health\n" +
-                "3. Changing water\n" +
-                "4. Viewing last water change\n" +
-                "5. Exiting");
 
         while (true) {
+            System.out.println("Welcome to our fish menu. \n You can select your option by choosing a number between 1 - 5");
+            System.out.println("1. Viewing fish status\n" +
+                    "2. Updating fish health\n" +
+                    "3. Changing water\n" +
+                    "4. Viewing last water change\n" +
+                    "5. Exiting");
 
         String userInput = scanner.nextLine();
 
@@ -34,9 +34,6 @@ public class testClass {
             String userInputWater = scanner.nextLine();
             if (userInputWater.equals("Y")) {
                 fishtank.changeWater();
-                break;
-            } else {
-                break;
             }
         } else if (userInput.equals("4")) {
             System.out.println(fishtank);
